@@ -1,0 +1,26 @@
+listen: ":5060"
+domains:
+
+  # Fallback value for unmatched domain and default values for existing domains
+  default:
+    incoming:
+      type: imap
+      host: mail.rainbownerds.de
+      port: 993
+      sslMethod: "TLS"
+      username: "%EMAILADDRESS%"
+      passwordType: "PLAIN"
+    outgoing:
+      type: smtp
+      host: mail.rainbownerds.de
+      port: 993
+      sslMethod: "TLS"
+      username: "%EMAILADDRESS%"
+      passwordType: "PLAIN"
+
+  felixbreidenstein.de:
+    incoming:
+      host: mail.felixbreidenstein.de
+      sslMethod: "FOOBAR"
+    outgoing:
+      host: mail.felixbreidenstein.de

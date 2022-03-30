@@ -1,0 +1,31 @@
+<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
+  <Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
+    <User>
+      <DisplayName>nausch.org</DisplayName>
+    </User>
+    <Account>
+      <AccountType>email</AccountType>
+      <Action>settings</Action>
+      <Protocol>
+        <Type>IMAP</Type>
+        <Server>imap.nausch.org</Server>
+        <Port>993</Port>
+        <DomainRequired>off</DomainRequired>
+        <SPA>off</SPA>
+        <SSL>on</SSL>
+        <AuthRequired>on</AuthRequired>
+        <LoginName>django@nausch.org</LoginName>
+      </Protocol>
+      <Protocol>
+        <Type>SMTP</Type>
+        <Server>mx01.nausch.org</Server>
+        <Port>465</Port>
+        <DomainRequired>off</DomainRequired>
+        <SPA>off</SPA>
+        <SSL>on</SSL>
+        <AuthRequired>on</AuthRequired>
+        <LoginName>django@nausch.org</LoginName>
+      </Protocol>
+    </Account>
+  </Response>
+</Autodiscover>
