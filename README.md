@@ -27,11 +27,15 @@ Then you need to get a SSL certificate for `autodiscover.example.com`. Now scrol
 configure the webserver to serve the XML files.
 
 ### Multi domain setup
-Here comes the actual fun part. Lets say you host emails both for `example.com` and `awesome.org`. Like in the example above you need one domain, lets call it the main domain, which has the actual webserver runnig which serves the mdec tool. We will use example.com as our main domain for this example. Configure these two DNS records:
+Here comes the actual fun part. Lets say you host emails both for `example.com` and `awesome.org`. Like in the example
+above you need one domain, lets call it the main domain, which has the actual webserver runnig which serves the mdec
+tool. We will use example.com as our main domain for this example. Configure these two DNS records:
   * autoconfig.example.com
   * autodiscover.example.com
 
-Now for `awesome.org` (and every other domain) we also need to add two records, but the nice part is, that no matter how many domains we host, we neither have to touch the dns of our main domain, touch the webserver config or get any additional SSL certificates. Neat!
+Now for `awesome.org` (and every other domain) we also need to add two records, but the nice part is, that no matter how
+many domains we host, we neither have to touch the dns of our main domain, touch the webserver config or get any
+additional SSL certificates. Neat!
 
 You just need these two records:
   * CNAME for `autoconfig.awesome.org` which points to `autoconfig.example.com`
@@ -72,9 +76,16 @@ This is the standard developed by Mozilla and is used e.g. in Thunderbird.  Auto
 emailaddres they requested via the `emailaddress` GET-Parameter. They request only plain HTTP and don't accept a
 redirect to https so you need to deliver it plain.
 
+Documentation for the file format can be found in the
+[Mozilla Wiki](https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat)
 
-### Autodiscover
-Todo...
+### Autodiscover 
+This was the old standard invented by Microsoft in e.g. Outlook. From what I know this is no longer used since 2016.
+There this is not implemented here.
+
+### Autodiscover V2
+This is the successor to the old Autodiscover protocol. But apparantlt only supports Office365 and no longer plain IMAP
+or POP3. Therefore this can't be used for selfhosted mail servers. Thanks Microsoft!
 
 ### Mobileconfig
 Todo...
