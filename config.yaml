@@ -1,4 +1,4 @@
-listen: ":5060"
+listen: ":6060"
 domains:
 
   # Fallback value for unmatched domain and default values for existing domains
@@ -17,6 +17,9 @@ domains:
       sslMethod: "TLS"
       username: "%EMAILADDRESS%"
       passwordType: "PLAIN"
+    general:
+      organization: "fleaz Inc."
+
 
   felixbreidenstein.de:
     incoming:

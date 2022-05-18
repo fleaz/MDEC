@@ -6,45 +6,45 @@
     	<array>
     		<dict>
     			<key>EmailAccountDescription</key>
-    			<string>nausch.org</string>
+                <string>{{ .Domain }}</string>
     			<key>EmailAccountName</key>
-    			<string></string>
+                <string>{{ .EMail }}</string>
     			<key>EmailAccountType</key>
     			<string>EmailTypeIMAP</string>
     			<key>EmailAddress</key>
-    			<string></string>
+                <string></string>
     			<key>IncomingMailServerAuthentication</key>
     			<string>EmailAuthPassword</string>
     			<key>IncomingMailServerHostName</key>
-    			<string>imap.nausch.org</string>
+                <string>{{ .Incoming.Host }}</string>
     			<key>IncomingMailServerPortNumber</key>
-    			<integer>993</integer>
+                <integer>{{ .Incoming.Port }}</integer>
     			<key>IncomingMailServerUseSSL</key>
     			<true/>
     			<key>IncomingMailServerUsername</key>
-    			<string></string>
+                <string>{{ .Incoming.Username }}</string>
     			<key>IncomingPassword</key>
     			<string></string>
     			<key>OutgoingMailServerAuthentication</key>
     			<string>EmailAuthPassword</string>
     			<key>OutgoingMailServerHostName</key>
-    			<string>mx01.nausch.org</string>
+                <string>{{ .Outgoing.Host }}</string>
     			<key>OutgoingMailServerPortNumber</key>
-    			<integer>587</integer>
+                <integer>{{ .Outgoing.Port }}</integer>
     			<key>OutgoingMailServerUseSSL</key>
     			<true/>
     			<key>OutgoingMailServerUsername</key>
-    			<string></string>
+                <string>{{ .Outgoing.Username }}</string>
     			<key>OutgoingPasswordSameAsIncomingPassword</key>
     			<true/>
     			<key>PayloadDescription</key>
     			<string>Configures email account.</string>
     			<key>PayloadDisplayName</key>
-    			<string>nausch.org</string>
+                <string>{{ .Domain }}</string>
     			<key>PayloadIdentifier</key>
-    			<string>nausch.org.email</string>
+    			<string>g.email</string>
     			<key>PayloadOrganization</key>
-    			<string>test</string>
+                <string>{{ .General.Organization }}</string>
     			<key>PayloadType</key>
     			<string>com.apple.mail.managed</string>
     			<key>PayloadUUID</key>
